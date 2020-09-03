@@ -69,7 +69,7 @@ chooseBlessedTerms <- function(onto, ..., skip.empty=TRUE, n=50, saved=NULL) {
         ancestors <- setdiff(names(subcomponent(g, o, "in")), o)
 
         observed <- intersect(descendents, all.nodes)
-        if (skip.empty && length(observed)==0L) {
+        if (skip.empty && length(observed)==0L && !o %in% all.nodes) {
             saved$used[o] <- FALSE
             next
         }
