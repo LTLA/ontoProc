@@ -135,7 +135,7 @@ Choice: ", o, onto$name[o]))
                 saved$used[o] <- FALSE
             } else if (answer=="a") {
                 saved$used[o] <- TRUE
-                saved$used[descendents] <- TRUE
+                saved$used[descendents] <- FALSE
                 processed <- processed + length(descendents)
             } else if (answer=="i") {
                 saved$used[o] <- FALSE
